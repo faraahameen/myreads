@@ -17,14 +17,20 @@ class SearchHandler extends Component {
       query: query,
     }));
     BooksAPI.search(query.trim(), maxResults).then((books) => {
-      if (books.error !== "empty query" && books !== undefined) {
+      if (query && books.length>0) {
         this.setState(() => ({ searchedBooks: books, found: true }));
-      } else {
+      }else if(query === ""){
+        this.setState(() => ({
+          searchedBooks: [],
+          found: true,
+        }));
+      } else{
         this.setState(() => ({
           searchedBooks: [],
           found: false,
         }));
       }
+      (!query) && this.setState(()=>({searchedBooks:[], found:true}))
     });
   };
   render() {

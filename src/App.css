@@ -176,3 +176,17 @@ body, .app {
   text-align: center;
   font-size: 0.8em;
 }
+/* Not Found Page*/
+.not-found-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.not-found-page h1{
+  font-size: 4rem;
+}
+.not-found-page h2{
+  font-size: 2rem;
+}

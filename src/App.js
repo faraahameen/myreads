@@ -6,6 +6,7 @@ import * as BookAPI from "./BooksAPI";
 import { Route, Routes } from "react-router-dom";
 import BookHandler from "./components/BookHandler";
 import SearchHandler from "./components/SearchHandler";
+import NotFound from "./NotFound";
 
 class BooksApp extends React.Component {
   state = {
@@ -56,6 +57,7 @@ class BooksApp extends React.Component {
             path="/search"
             element={<SearchHandler shelfBooks={this.state.books}  onUpdate={this.updateBookShelf}/>}
           />
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </div>
     );
