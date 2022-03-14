@@ -7,3 +7,9 @@ This project is React.js Udacity's Nanodegree final assesment project. It demons
 - Above the list of files, click Code.
 - To clone the repository using HTTPS, copy the HTTPS link
 - In your command-line tool, clone repo using git clone URL
+
+ ## **Dependencies**
+ #### Before starting your project, you first must install dependencies
+ - Run npm install 
+ - Run npm start ( To start development server)
+ 
